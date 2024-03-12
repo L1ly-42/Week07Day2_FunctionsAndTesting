@@ -140,9 +140,8 @@ describe('divide', () => {
   });
 
   test('can divide two zeroes', () => {
-    expected = NaN;
     actual = divide(0, 0);
-    expect(actual).toBe(expected);
+    expect(actual).toBeNaN();
   });
 });
 
@@ -178,16 +177,14 @@ describe('modulus', () => {
   });
 
   test('can do modulus of zero ', () => {
-    expected = NaN;
     actual = modulus(-13, 0);
-    expect(actual).toBe(expected);
+    expect(actual).toBeNaN();
   });
 
 });
 
 describe('even', () => {
 
-// positive num
 test('can tell if a positive number is even', () => {
   expected = true;
   actual = even(20);
