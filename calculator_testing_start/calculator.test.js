@@ -43,13 +43,19 @@ describe('subtract', () => {
     expect(actual).toBe(expected);
   });
 
-  test('can subtract 2  numbers to create a negative result', () => {
+  test('can subtract 2 numbers to create a negative result', () => {
     expected = -5;
     actual = subtract(5,10);
     expect(actual).toBe(expected);
   });
-});
 
+  test('can subtract 2 negative numbers', () => {
+    expected = 0;
+    actual = subtract(-5,-5);
+    expect(actual).toBe(expected);
+  });
+
+});
 
 
 describe('multiply', () => {
