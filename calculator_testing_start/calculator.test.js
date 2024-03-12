@@ -103,6 +103,48 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
+  test('can divide two small positive numbers', () => {
+    expected = 5;
+    actual = divide(10, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two big positive numbers', () => {
+    expected = 5;
+    actual = divide(25000, 5000);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two negative numbers', () => {
+    expected = 10;
+    actual = divide(-30, -3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide a positive number by a negative number', () => {
+    expected = -10;
+    actual = divide(30, -3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two numbers to create a float', () => {
+    expected = 2.5;
+    actual = divide(25, 10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide by zero', () => {
+    expected = Infinity;
+    actual = divide(25, 0);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two zeroes', () => {
+    expected = NaN;
+    actual = divide(0, 0);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('modulus', () => {
