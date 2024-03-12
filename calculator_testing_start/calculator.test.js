@@ -68,8 +68,12 @@ describe('subtract', () => {
   });
 });
 
-
 describe('multiply', () => {
+  test('can multiply two small positive numbers', () => {
+    expected = 6;
+    actual = multiply(2, 3);
+    expect(actual).toBe(expected);
+  });
 
 });
 
