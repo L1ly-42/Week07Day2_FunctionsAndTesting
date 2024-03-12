@@ -209,5 +209,16 @@ test('can tell if zero is even', () => {
 });
 
 describe('odd', () => {
+  test('can tell if a positive number is odd', () => {
+    expected = true;
+    actual = odd(21);
+    expect(actual).toBe(expected);
+  });
+  
+  test('can tell if a negative number is odd', () => {
+    expected = true;
+    actual = odd(-13);
+    expect(actual).toBe(expected);
+  });
 
 });
