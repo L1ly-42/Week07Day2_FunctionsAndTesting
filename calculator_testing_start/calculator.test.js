@@ -75,6 +75,12 @@ describe('multiply', () => {
     expect(actual).toBe(expected);
   });
 
+  test('can multiply two large positive numbers', () => { 
+    expected = 300000;
+    actual = multiply(500,600)
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('divide', () => {
