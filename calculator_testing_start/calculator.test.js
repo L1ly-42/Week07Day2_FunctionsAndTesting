@@ -144,15 +144,53 @@ describe('divide', () => {
     actual = divide(0, 0);
     expect(actual).toBe(expected);
   });
-
 });
 
 describe('modulus', () => {
+  test('can do modulus of two positive numbers', () => {
+    expected = 3;
+    actual = modulus(13, 10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can do modulus of two numbers with no remainder ', () => {
+    expected = 0;
+    actual = modulus(10, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can do modulus of one negative number and by a positive number ', () => {
+    expected = -3;
+    actual = modulus(-13, 10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can do modulus of one positive number and by a negative number ', () => {
+    expected = 3;
+    actual = modulus(13, -10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can do modulus of 2 negative numbers ', () => {
+    expected = -3;
+    actual = modulus(-13, -10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can do modulus of zero ', () => {
+    expected = NaN;
+    actual = modulus(-13, 0);
+    expect(actual).toBe(expected);
+  });
+
 
 });
 
 describe('even', () => {
-
+// positive num
+// negative num
+// is zero even
+//decimal
 });
 
 describe('odd', () => {
