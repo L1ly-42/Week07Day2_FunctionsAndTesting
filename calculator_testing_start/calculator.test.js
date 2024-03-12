@@ -42,6 +42,12 @@ describe('subtract', () => {
     actual = subtract(10,5);
     expect(actual).toBe(expected);
   });
+
+  test('can subtract 2  numbers to create a negative result', () => {
+    expected = -5;
+    actual = subtract(5,10);
+    expect(actual).toBe(expected);
+  });
 });
 
 
