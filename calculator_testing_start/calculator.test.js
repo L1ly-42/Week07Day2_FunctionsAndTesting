@@ -49,12 +49,23 @@ describe('subtract', () => {
     expect(actual).toBe(expected);
   });
 
-  test('can subtract 2 negative numbers', () => {
+  test('can subtract a negative number to create an addition', () => {
     expected = 0;
     actual = subtract(-5,-5);
     expect(actual).toBe(expected);
   });
 
+  test('can subtract a positive number from a negative number', () => {
+    expected = -20;
+    actual = subtract(-10, 10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract zero', ()=>{
+     expected = 42;
+     actual = subtract(42,0);
+     expect(actual).toBe(expected);
+  });
 });
 
 
