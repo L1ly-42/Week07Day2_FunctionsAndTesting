@@ -183,14 +183,29 @@ describe('modulus', () => {
     expect(actual).toBe(expected);
   });
 
-
 });
 
 describe('even', () => {
+
 // positive num
-// negative num
-// is zero even
-//decimal
+test('can tell if a positive number is even', () => {
+  expected = true;
+  actual = even(20);
+  expect(actual).toBe(expected);
+});
+
+test('can tell if a negative number is even', () => {
+  expected = true;
+  actual = even(-100);
+  expect(actual).toBe(expected);
+});
+
+test('can tell if zero is even', () => {
+  expected = true;
+  actual = even(0);
+  expect(actual).toBe(expected);
+});
+
 });
 
 describe('odd', () => {
