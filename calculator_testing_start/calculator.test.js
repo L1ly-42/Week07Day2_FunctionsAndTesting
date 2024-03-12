@@ -81,6 +81,24 @@ describe('multiply', () => {
     expect(actual).toBe(expected);
   });
 
+  test('can multiply two negative numbers', () => {
+    expected = 10;
+    actual = multiply(-2,-5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply by zero', () => {
+    expected = 0;
+    actual = multiply(42,0);
+    expect(actual).toBe(expected); 
+  });
+
+  test('can multiply two zeroes', () => {
+    expected = 0;
+    actual = multiply(0,0);
+    expect(actual).toBe(expected); 
+  });
+
 });
 
 describe('divide', () => {
